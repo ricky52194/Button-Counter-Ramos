@@ -12,14 +12,19 @@ public class MainActivity extends AppCompatActivity {
     private Button subtractButton;
     private Button resetButton;
     private TextView count;
-    int counter = 0;
+    int counter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         count = findViewById(R.id.count);
-        count.setText(Integer.toString(counter));
+        if(savedInstanceState != null){
+            counter = Integer.parseInt(savedInstanceState.getString("currentValue"));
+            count.setText(Integer.toString(counter));
+        }else{
+            counter = Integer.parseInt(count.getText().toString());
+        }
         addButton = findViewById(R.id.add);
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,9 +45,23 @@ public class MainActivity extends AppCompatActivity {
         resetButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                counter = 0;
-                count.setText(Integer.toString(counter));
+                count.setText(R.string.initial);
+                counter = Integer.parseInt(count.getText().toString());
             }
         });
     }
+
+    @Override
+    protected void onSaveInstanceState(Bundle savedInstanceState){
+        super.onSaveInstanceState(savedInstanceState);
+        savedInstanceState.putString("currentValue", count.getText().toString());
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState){
+        super.onRestoreInstanceState(savedInstanceState);
+        counter = Integer.parseInt(savedInstanceState.getString("currentValue"));
+    }
+
+
 }

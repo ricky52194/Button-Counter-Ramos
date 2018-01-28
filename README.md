@@ -11,3 +11,5 @@ Create an app that has three buttons, one for incrementing a counter, one for de
 ## Reference(s):
 1. Circular Buttons: https://stackoverflow.com/questions/9884202/custom-circle-button (User: Adil Soomro)   
 
+![Screenshot1](Portrait ButtonCounter.png)  
+![Screenshot2](Portrait ButtonCounter.png)

@@ -8,8 +8,10 @@ Create an app that has three buttons, one for incrementing a counter, one for de
 2. The three buttons have been filled with color.  
 3. The three buttons have circular shapes.  
 
+
+## Images: 
+![Screenshot1](https://github.com/ricky52194/Button-Counter-Ramos/blob/master/Portrait%20ButtonCounter.png)  
+![Screenshot2](https://github.com/ricky52194/Button-Counter-Ramos/blob/master/Landscape%20ButtonCounter.png)  
+
 ## Reference(s):
 1. Circular Buttons: https://stackoverflow.com/questions/9884202/custom-circle-button (User: Adil Soomro)   
-
-![Screenshot1](Portrait ButtonCounter.png)  
-![Screenshot2](https://github.com/ricky52194/Button-Counter-Ramos/blob/master/Landscape%20ButtonCounter.png)
